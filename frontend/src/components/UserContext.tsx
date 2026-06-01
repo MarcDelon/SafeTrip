@@ -13,7 +13,7 @@ interface User {
 interface UserContextType {
   user: User | null;
   loading: boolean;
-  login: (user: User) => void;
+  login: (user: User, token?: string) => void;
   logout: () => Promise<void>;
   refresh: () => Promise<void>;
 }
